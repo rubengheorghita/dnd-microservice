@@ -1,24 +1,26 @@
 D&D 5e Microservice (Microservice A)
 
-This microservice allows users to search for enemies (monsters) and rules from the D&D 5e API. It reads requests from a text file, fetches data from the API, and writes the response to a JSON file.
+This microservice allows you to search for enemies (monsters) and rules from the D&D 5e API. It reads requests from a text file, fetches data from the API, and writes the response to a JSON file. This setup makes it easy to integrate with other applications while keeping the process simple and lightweight.
 
 How to Use This Microservice
 
 Sending a Request
-To request data, write a category and search term to search_input.txt in the format:
+To request data, write a category and search term to search_input.txt using the format:
 
 category:search_term
 
-Example (Search for a D&D monster, "Goblin"):
-enemy:goblin
+For example:
 
-Example (Search for a D&D rule, "Attack Rolls"):
-rule:attack-rolls
+To search for a monster like a Goblin:
+enemy: goblin
 
-Once saved, the microservice will automatically read the request and fetch data.
+To search for a D&D rule, like Attack Rolls:
+rule: attack-rolls
+
+Once the request is written, the microservice will pick it up automatically and process the search.
 
 Receiving a Response
-The microservice writes the response to search_results.json.
+The microservice will write the results to search_results.json. Here’s what you might see:
 
 Example Response for "Goblin":
 {
@@ -47,36 +49,38 @@ Example Response for "Attack Rolls":
 }
 
 UML Sequence Diagram
-Upload your UML diagram to GitHub and replace this link:
 
+Below is a high-level view of how this microservice works. The sequence starts with the main program writing a request, which the microservice picks up, processes, and retrieves data from the D&D 5e API before writing it to a results file.
 
-Description of the Flow
+(Upload and link your UML diagram here)
 
-The Main Program writes a request (enemy:goblin) to search_input.txt.
+How It Works:
 
-The Microservice detects the request and fetches the corresponding data from https://www.dnd5eapi.co/.
+The main program writes a request (e.g., enemy:goblin) to search_input.txt.
+
+The microservice reads the request and makes a call to the D&D 5e API.
 
 The API responds with JSON data.
 
-The Microservice writes the response to search_results.json.
+The microservice writes the data to search_results.json.
 
-The Main Program reads and displays the result.
+The main program reads and displays the results.
 
 Mitigation Plan
 
 Who is using this microservice?
 
-Aaron 
+Aaron
 
 Current Status
 
-Microservice is fully functional.
+The microservice is fully functional.
 
 How will my teammate access it?
 
-GitHub Repo: https://github.com/rubengheorghita/dnd-microservice
+They can clone the GitHub repository: https://github.com/rubengheorghita/dnd-microservice
 
-Run locally: Clone the repo and execute search_service.py.
+Run it locally by executing search_service.py.
 
 What if something goes wrong?
 
@@ -90,9 +94,8 @@ https://www.dnd5eapi.co/api/monsters/goblin
 If this page doesn’t load, the API might be down.
 
 Backup Plan
-
-Cache some common enemy/rule data locally in case the API goes offline.
+If the D&D 5e API goes offline, we can cache common data locally to avoid interruptions.
 
 Author
-Ruben Gheorghita
 
+Ruben Gheoghita
