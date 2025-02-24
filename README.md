@@ -52,7 +52,8 @@ UML Sequence Diagram
 
 Below is a high-level view of how this microservice works. The sequence starts with the main program writing a request, which the microservice picks up, processes, and retrieves data from the D&D 5e API before writing it to a results file.
 
-(Upload and link your UML diagram here)
+![Screenshot (735)](https://github.com/user-attachments/assets/31e1989a-280a-4d8f-80d9-48d096b6c72d)
+
 
 How It Works:
 
