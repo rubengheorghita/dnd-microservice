@@ -67,36 +67,6 @@ The microservice writes the data to search_results.json.
 
 The main program reads and displays the results.
 
-Mitigation Plan
-
-Who is using this microservice?
-
-Aaron
-
-Current Status
-
-The microservice is fully functional.
-
-How will my teammate access it?
-
-They can clone the GitHub repository: https://github.com/rubengheorghita/dnd-microservice
-
-Run it locally by executing search_service.py.
-
-What if something goes wrong?
-
-Check if the microservice is running. Run:
-python search_service.py
-
-Verify that search_input.txt exists and contains a valid request.
-
-Check the API response manually:
-https://www.dnd5eapi.co/api/monsters/goblin
-If this page doesn’t load, the API might be down.
-
-Backup Plan
-If the D&D 5e API goes offline, we can cache common data locally to avoid interruptions.
-
 Author
 
 Ruben Gheoghita
